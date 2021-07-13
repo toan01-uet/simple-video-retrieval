@@ -1,10 +1,10 @@
 # Simple Video Retrieval System
 ## Demo
-![demo](sys.png)
+![demo](https://media.giphy.com/media/FiYxdyFWVp0gJ4UNqn/giphy.gif)
 ## System overview
-![sys_overview](sys.png)
+![sys_overview](https://github.com/toan01-uet/simple-video-retrieval/blob/master/models/templates/sys_overview.png)
 ## Description
-In this project, I aim to develop a system to automatically search and retrieve similar videos in large scale dataset. However, the time project is limit (2 week),then the small dataset was selected from UCF11 which are about humans action:  biking/cycling, diving, golf swinging, horse back riding,...
+In this project, I aim to develop a system to automatically search and retrieve similar videos in large scale dataset. However, the time project is limit (2 week), then the small dataset was selected from UCF11 which are about humans action:  biking/cycling, diving, golf swinging, horse back riding,...
 
 The dataset contains 121 videos :
 - Biking: 25 videos
