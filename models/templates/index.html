@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <script type="text/css">
+            .center {
+                margin: auto;
+                width: 60%;
+              
+            }
+        </script>
+    </head>
+    <body style="background-color:powderblue; padding: 10px;"  >
+
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+        <h1>Search video</h1>
+        <form method="POST", action="">
+            <select name="comp_select" class="selectpicker form-control">
+                {% for o in data %}
+                <option value="{{ o }}">{{ o }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="search">
+        </form>
+
+    <br>
+    <hr>
+        <h2>Searched video </h2>
+        <div class="center" >
+            <video  width="320" height="240" controls>
+                <!-- {% for o in data %}
+                <option value="{{ o }}">{{ o }}</option>
+                {% endfor %} -->
+                {% if message %}
+                <source src= "{{ url_for('static', filename=  message) }}" type="video/mp4">
+               
+                {% endif %}
+                 
+                
+            </video>
+            
+        </div>
+        <h2>Similar video </h2>
+        {% if video_similar %}
+            {% for video,score in video_similar %}
+                <div class="center" >
+                    <video  width="320" height="240" controls>
+                        <source src= "{{ url_for('static', filename=  video) }}" type="video/mp4">
+                        
+                    </video>
+                    <p  style="background-color:aquamarine; width:320">Simlar score: {{score}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+
+        
+    </body>
+</html>
